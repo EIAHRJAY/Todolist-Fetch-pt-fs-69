@@ -10,3 +10,62 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body{
+    margin-top: 100px;
+    background-color: #F8F8FF;
+    display: flex;
+    justify-content: center;
+  }
+  ul{
+    padding: 0;
+    margin-bottom: 0;
+  }
+  ul li{
+    border: 1px solid grey;
+    list-style: none;
+    padding: 5px;
+    display: flex;
+   justify-content:space-between;
+   
+   
+   
+  }
+  h1{
+    text-align: center;
+  }
+  input{
+    width: 500px;
+    border: none;
+    outline: none;
+  }
+  
+  button{
+    color: black;
+    border: none;
+    background-color: whitesmoke;
+  }
+  .hover-button {
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  
+  .hover-button:hover {
+    background-color: black; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+    
+  }
+  
+  
+  .take{
+    border: black solid 1px;
+    width: 511px;
+    padding-left: 3px;
+  }
