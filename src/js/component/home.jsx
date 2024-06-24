@@ -4,10 +4,13 @@ const Home = () => {
   const [inputValue, setInputValue] = useState("");
   const [todos, setTodos] = useState([]);
 
+ 
   useEffect(() => {
     initializeUserAndTasks();
   }, []);
 
+ 
+ 
   //INICIALIZA user y OBTENER tareas
   async function initializeUserAndTasks (){
     try{
@@ -140,29 +143,6 @@ const Home = () => {
     }
   }
   
-  // ACTUALIZAR DATOS
-  //  async function updateTodos(id, updatedLabel) {
-  //   try {
-  //    const updatedTodo = { label: updatedLabel /*is_done: true*/ };
-  //    const response = await fetch(`https://playground.4geeks.com/todo/todos/${id}`, {
-  //       method: "PUT",
-  //      headers: {
-  //        "Content-Type": "application/json"
-  //        },
-  //        body: JSON.stringify(updatedTodo),
-  //     });
-  //      if (!response.ok) {
-  //        throw new Error(`Error: ${response.status}`);
-  //      }
-      
-  //      const data = await response.json();
-  //     setTodos(todos.map(todo => (todo.id === id ? data : todo)));
-  //    } catch (error) {
-  //      console.error("Failed to update todo:", error);
-  //    }
-  // }
-
-
  //RENDERIZACAO
   return (
     <div className="container">
