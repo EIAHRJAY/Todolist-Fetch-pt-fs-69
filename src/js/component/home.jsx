@@ -90,7 +90,7 @@ const Home = () => {
       console.log('Added todo:', data);  // Depuracao
 
       if (data && data.id) {
-        setTodos([...todos, data]);
+        setTodos(prevTodos => [...prevTodos, data]); // Arreglo Aqui 
         setInputValue("");
         //await updateTodos(data.id, inputValue); //el cacau esta aqui 
       } else {
@@ -114,7 +114,7 @@ const Home = () => {
       if (!response.ok) {
         throw new Error(`Error: ${response.status}`);
       }
-      setTodos(todos.filter(todo => todo.id !== id));
+      setTodos(prevTodos => prevTodos.filter(todo => todo.id !== id)); // Arreglo aqui
     } catch (error) {
       console.error("Failed to delete todo:", error);
     }
